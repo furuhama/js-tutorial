@@ -13,3 +13,21 @@ myImage.onclick = function() {
     myImage.setAttribute('src', 'images/firefox-icon.png');
   }
 }
+
+var myButton = document.querySelector('button');
+myButton.onclick = function() {
+  setUserName();
+}
+
+function setUserName() {
+  var myName = prompt('Please enter your name');
+  localStorage.setItem('name', myName);
+  myHeading.textContent = 'Hi, ' + myName;
+}
+
+if(!localStorage.getItem('name')) {
+  setUserName();
+} else {
+  var storedName = localStorage.getItem('name');
+  myHeading.textContent = 'Hi, ' + storedName;
+}
