@@ -4,8 +4,8 @@ Simple web page & js codes.
 
 References:
 
-[MDN web docs - JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)
-[js-primer](https://jsprimer.net/)
+- [MDN web docs - JavaScript basics](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)
+- [js-primer](https://jsprimer.net/)
 
 ===============================================
 
