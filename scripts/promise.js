@@ -38,3 +38,44 @@ function errorPromise(message) {
 errorPromise("handle error").catch(error => {
   console.log(error.message);
 });
+
+// ===================================================================
+
+// async function definition
+async function asyncFn() {
+  return "Returned value";
+}
+
+asyncFn().then(value => {
+  console.log(value);
+});
+
+async function exceptFn() {
+  throw new Error("Raise an exception");
+  console.log("this line would not be evaluated");
+}
+
+exceptFn().catch(value => {
+  console.log(value.message);
+});
+
+// ===================================================================
+
+// Use `await`, to get value of Promise object changing its state to fulfilled or rejected
+async function asyncMain() {
+  const value = await Promise.resolve(42);
+  console.log(value);
+}
+
+asyncMain();
+
+async function asyncWithAwait() {
+  await new Promise((resolve) => {
+    setTimeout(resolve, 1000);
+  });
+};
+
+console.log("Start asyncWithAwait()");
+asyncWithAwait().then(() => {
+  console.log("End asyncWithAwait()");
+});
